@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="power-off.png" />
+    <None Remove="Rund logga.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="power-off.png" />
+    <Resource Include="Rund logga.png" />
+  </ItemGroup>
+
 </Project>

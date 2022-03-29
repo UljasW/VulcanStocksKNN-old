@@ -29,7 +29,32 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-      
+            <Image Width="60" Height="60">
+                <Image.Source>
+                    <ImageSource>Rund logga.png</ImageSource>
+                </Image.Source>
+            </Image>
+
+            <Button Grid.Row="5">
+                <Button.Content>
+                    <Image Width="40" Height="40">
+                        <Image.Source>
+                            <ImageSource>/power-off.png</ImageSource>
+                        </Image.Source>
+                    </Image>
+                </Button.Content>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"></Setter>
+                        <Style.Triggers>
+                            <Trigger Property ="IsMouseOver" Value="True">
+                                <Setter Property= "Background" Value="Transparent"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
         </Grid>
 
 
