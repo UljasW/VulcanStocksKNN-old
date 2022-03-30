@@ -10,11 +10,13 @@
   <ItemGroup>
     <None Remove="power-off.png" />
     <None Remove="Rund logga.png" />
+    <None Remove="Settings-icon-symbol.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="power-off.png" />
     <Resource Include="Rund logga.png" />
+    <Resource Include="Settings-icon-symbol.png" />
   </ItemGroup>
 
 </Project>

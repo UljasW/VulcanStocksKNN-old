@@ -8,6 +8,19 @@
         WindowStyle="None"
         Background="#161622"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Image}"/>
+        <Storyboard x:Key="ScaleUpImageStoryboard">
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTclose" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTclose" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+        <Storyboard x:Key="ScaleDownImageStoryboard">
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTclose" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTclose" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+    </Window.Resources>
+    
+
 
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="5" />
@@ -20,7 +33,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid Background="#272434" Grid.Column="0">
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -35,29 +48,38 @@
                 </Image.Source>
             </Image>
 
-            <Button Grid.Row="5">
+            <Button Click="BTCloseClick" Grid.Row="5">
                 <Button.Content>
-                    <Image Width="40" Height="40">
+
+                    <Image Name="BTclose" Width="40" Height="40">
                         <Image.Source>
                             <ImageSource>/power-off.png</ImageSource>
                         </Image.Source>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Image.MouseLeave">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard}"/>
+                            </EventTrigger>
+                        </Image.Triggers>
                     </Image>
                 </Button.Content>
                 <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="Transparent"></Setter>
-                        <Style.Triggers>
-                            <Trigger Property ="IsMouseOver" Value="True">
-                                <Setter Property= "Background" Value="Transparent"/>
-                            </Trigger>
-                        </Style.Triggers>
+                    <Style  TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
                     </Style>
                 </Button.Style>
             </Button>
-
         </Grid>
-
-
-
     </Grid>
 </Window>
