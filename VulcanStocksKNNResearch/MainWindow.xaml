@@ -55,6 +55,15 @@
             <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTDemo" Storyboard.TargetProperty="Width"/>
         </Storyboard>
 
+        <Storyboard x:Key="ScaleUpImageStoryboard_LO">
+            <DoubleAnimation Duration="0:0:0.2" From="55" To="65" Storyboard.TargetName="BTLogo" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="55" To="65" Storyboard.TargetName="BTLogo" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+        <Storyboard x:Key="ScaleDownImageStoryboard_LO">
+            <DoubleAnimation Duration="0:0:0.2" From="65" To="55" Storyboard.TargetName="BTLogo" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="65" To="55" Storyboard.TargetName="BTLogo" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+
 
     </Window.Resources>
     
@@ -78,11 +87,40 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Image Width="60" Height="60">
-                <Image.Source>
-                    <ImageSource>Rund logga.png</ImageSource>
-                </Image.Source>
-            </Image>
+
+
+            <Button Click="BTLogoClick" Grid.Row="0">
+                <Button.Content>
+
+                    <Image Name="BTLogo" Width="55" Height="55">
+                        <Image.Source>
+                            <ImageSource>/Rund logga.png</ImageSource>
+                        </Image.Source>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard_LO}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Image.MouseLeave">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard_LO}"/>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Button.Content>
+                <Button.Style>
+                    <Style  TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
 
             <Button Click="BTDemoClick" Grid.Row="1">
                 <Button.Content>
@@ -220,7 +258,7 @@
             <Button Click="BTCloseClick" Grid.Row="5">
                 <Button.Content>
 
-                    <Image Name="BTclose" Width="40" Height="40">
+                    <Image Name="BTclose" Width="40" Height="40" RenderTransformOrigin="-1.438,-0.788">
                         <Image.Source>
                             <ImageSource>/power-off.png</ImageSource>
                         </Image.Source>
@@ -252,6 +290,10 @@
 
 
 
+        </Grid>
+        
+        <Grid Grid.Column="1">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
         </Grid>
  
     </Grid>

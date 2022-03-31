@@ -48,5 +48,10 @@ namespace VulcanStocksKNNResearch
         {
 
         }
+
+        private void BTLogoClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
