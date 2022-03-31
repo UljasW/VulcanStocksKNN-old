@@ -28,6 +28,33 @@
             <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTsettings" Storyboard.TargetProperty="Width"/>
         </Storyboard>
 
+        <Storyboard x:Key="ScaleUpImageStoryboard_BE">
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTTestBE" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTTestBE" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+        <Storyboard x:Key="ScaleDownImageStoryboard_BE">
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTTestBE" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTTestBE" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+
+        <Storyboard x:Key="ScaleUpImageStoryboard_MA">
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTManual" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTManual" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+        <Storyboard x:Key="ScaleDownImageStoryboard_MA">
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTManual" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTManual" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+
+        <Storyboard x:Key="ScaleUpImageStoryboard_DE">
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTDemo" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="40" To="50" Storyboard.TargetName="BTDemo" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+        <Storyboard x:Key="ScaleDownImageStoryboard_DE">
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTDemo" Storyboard.TargetProperty="Height"/>
+            <DoubleAnimation Duration="0:0:0.2" From="50" To="40" Storyboard.TargetName="BTDemo" Storyboard.TargetProperty="Width"/>
+        </Storyboard>
+
 
     </Window.Resources>
     
@@ -56,6 +83,139 @@
                     <ImageSource>Rund logga.png</ImageSource>
                 </Image.Source>
             </Image>
+
+            <Button Click="BTDemoClick" Grid.Row="1">
+                <Button.Content>
+
+                    <Image Name="BTDemo" Width="40" Height="40">
+                        <Image.Source>
+                            <ImageSource>/icons8-stock-64.png</ImageSource>
+                        </Image.Source>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard_DE}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Image.MouseLeave">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard_DE}"/>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Button.Content>
+                <Button.Style>
+                    <Style  TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            
+            <Button Click="BTManualClick" Grid.Row="2">
+                <Button.Content>
+
+                    <Image Name="BTManual" Width="40" Height="40">
+                        <Image.Source>
+                            <ImageSource>/icons8-typewriter-64.png</ImageSource>
+                        </Image.Source>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard_MA}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Image.MouseLeave">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard_MA}"/>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Button.Content>
+                <Button.Style>
+                    <Style  TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+            <Button Click="BTTestBEClick" Grid.Row="3">
+                <Button.Content>
+
+                    <Image Name="BTTestBE" Width="40" Height="40">
+                        <Image.Source>
+                            <ImageSource>/icons8-goal-100.png</ImageSource>
+                        </Image.Source>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard_BE}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Image.MouseLeave">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard_BE}"/>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Button.Content>
+                <Button.Style>
+                    <Style  TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Click="BTSettingsClick" Grid.Row="4">
+                <Button.Content>
+
+                    <Image Name="BTsettings" Width="40" Height="40">
+                        <Image.Source>
+                            <ImageSource>/Settings-icon-symbol.png</ImageSource>
+                        </Image.Source>
+                        <Image.Triggers>
+                            <EventTrigger RoutedEvent="Image.MouseEnter">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard_S}"/>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="Image.MouseLeave">
+                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard_S}"/>
+                            </EventTrigger>
+                        </Image.Triggers>
+                    </Image>
+                </Button.Content>
+                <Button.Style>
+                    <Style  TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
 
             <Button Click="BTCloseClick" Grid.Row="5">
                 <Button.Content>
@@ -89,40 +249,8 @@
                     </Style>
                 </Button.Style>
             </Button>
-            
-            <Button Click="BTSettingsClick" Grid.Row="4">
-                <Button.Content>
 
-                    <Image Name="BTsettings" Width="40" Height="40">
-                        <Image.Source>
-                            <ImageSource>/Settings-icon-symbol.png</ImageSource>
-                        </Image.Source>
-                        <Image.Triggers>
-                            <EventTrigger RoutedEvent="Image.MouseEnter">
-                                <BeginStoryboard Storyboard="{StaticResource ScaleUpImageStoryboard_S}"/>
-                            </EventTrigger>
-                            <EventTrigger RoutedEvent="Image.MouseLeave">
-                                <BeginStoryboard Storyboard="{StaticResource ScaleDownImageStoryboard_S}"/>
-                            </EventTrigger>
-                        </Image.Triggers>
-                    </Image>
-                </Button.Content>
-                <Button.Style>
-                    <Style  TargetType="Button">
-                        <Setter Property="Background" Value="Transparent" />
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Grid Background="{TemplateBinding Background}">
-                                        <ContentPresenter />
-                                    </Grid>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Button.Style>
-            </Button>
-            
+
 
         </Grid>
  

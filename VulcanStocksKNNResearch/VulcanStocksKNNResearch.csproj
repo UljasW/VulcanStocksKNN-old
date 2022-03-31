@@ -8,12 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icons8-goal-100.png" />
+    <None Remove="icons8-stock-64.png" />
+    <None Remove="icons8-typewriter-64.png" />
     <None Remove="power-off.png" />
     <None Remove="Rund logga.png" />
     <None Remove="Settings-icon-symbol.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="icons8-goal-100.png" />
+    <Resource Include="icons8-stock-64.png" />
+    <Resource Include="icons8-typewriter-64.png" />
     <Resource Include="power-off.png" />
     <Resource Include="Rund logga.png" />
     <Resource Include="Settings-icon-symbol.png" />

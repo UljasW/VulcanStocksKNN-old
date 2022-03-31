@@ -33,5 +33,20 @@ namespace VulcanStocksKNNResearch
         {
 
         }
+
+        private void BTTestBEClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BTManualClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BTDemoClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
