@@ -28,5 +28,10 @@ namespace VulcanStocksKNNResearch
         {
             this.Close();
         }
+
+        private void BTSettingsClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
