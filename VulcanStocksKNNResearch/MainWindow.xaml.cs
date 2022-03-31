@@ -23,6 +23,7 @@ namespace VulcanStocksKNNResearch
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Content= new HomePage();
         }
         private void BTCloseClick(object sender, RoutedEventArgs e)
         {

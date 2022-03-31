@@ -287,9 +287,6 @@
                     </Style>
                 </Button.Style>
             </Button>
-
-
-
         </Grid>
         
         <Grid Grid.Column="1">
