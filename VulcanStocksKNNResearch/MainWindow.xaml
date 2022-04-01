@@ -121,11 +121,7 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                <Button.ToolTip>
-                    <ToolTip Background="#161622">
-                        Home
-                    </ToolTip>
-                </Button.ToolTip>
+                
             </Button>
 
             <Button Click="BTDemoClick" Grid.Row="1">
@@ -159,11 +155,6 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                <Button.ToolTip>
-                    <ToolTip Background="#161622">
-                        Demotrading
-                    </ToolTip>
-                </Button.ToolTip>
             </Button>
             
             <Button Click="BTManualClick" Grid.Row="2">
@@ -197,11 +188,6 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                <Button.ToolTip>
-                    <ToolTip Background="#161622">
-                        Manual entry
-                    </ToolTip>
-                </Button.ToolTip>
             </Button>
 
 
@@ -236,11 +222,6 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                <Button.ToolTip>
-                    <ToolTip Background="#161622">
-                        Test best entry
-                    </ToolTip>
-                </Button.ToolTip>
             </Button>
 
             <Button Click="BTSettingsClick" Grid.Row="4">
@@ -274,11 +255,6 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                <Button.ToolTip>
-                    <ToolTip Background="#161622">
-                        Settings
-                    </ToolTip>
-                </Button.ToolTip>
             </Button>
 
             <Button Click="BTCloseClick" Grid.Row="5">
@@ -312,11 +288,6 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                <Button.ToolTip>
-                    <ToolTip Background="#161622">
-                        Close
-                    </ToolTip>
-                </Button.ToolTip>
             </Button>
         </Grid>
         
