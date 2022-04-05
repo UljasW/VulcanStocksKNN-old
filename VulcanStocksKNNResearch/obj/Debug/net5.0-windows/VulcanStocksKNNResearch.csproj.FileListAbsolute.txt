@@ -24,3 +24,5 @@ C:\VS\VulcanStocksKNNResearch\VulcanStocksKNNResearch\obj\Debug\net5.0-windows\H
 C:\VS\VulcanStocksKNNResearch\VulcanStocksKNNResearch\obj\Debug\net5.0-windows\HomePage.baml
 C:\VS\VulcanStocksKNNResearch\VulcanStocksKNNResearch\obj\Debug\net5.0-windows\Settings.g.cs
 C:\VS\VulcanStocksKNNResearch\VulcanStocksKNNResearch\obj\Debug\net5.0-windows\Settings.baml
+C:\VS\VulcanStocksKNNResearch\VulcanStocksKNNResearch\obj\Debug\net5.0-windows\Demotrading.g.cs
+C:\VS\VulcanStocksKNNResearch\VulcanStocksKNNResearch\obj\Debug\net5.0-windows\Demotrading.baml

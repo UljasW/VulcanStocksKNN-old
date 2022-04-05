@@ -47,12 +47,12 @@ namespace VulcanStocksKNNResearch
         private void BTManualClick(object sender, RoutedEventArgs e)
         {
             pmg.NotchDisplay="Manual entry";
-
         }
 
         private void BTDemoClick(object sender, RoutedEventArgs e)
         {
             pmg.NotchDisplay="Demotrading";
+            MainFrame.Content = new Demotrading();
         }
 
         private void BTLogoClick(object sender, RoutedEventArgs e)

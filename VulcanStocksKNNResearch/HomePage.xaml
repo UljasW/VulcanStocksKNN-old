@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="720"
       Title="HomePage">
+    
 
     <Grid>
         <Grid.RowDefinitions>
@@ -152,7 +153,6 @@
                 >
 
 
-                
             </Border>
 
             <Border  
@@ -275,4 +275,6 @@
 
 
     </Grid>
+    
+    
 </Page>
