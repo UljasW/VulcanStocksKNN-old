@@ -67,7 +67,7 @@
 
 
     </Window.Resources>
-    
+
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="5" />
     </WindowChrome.WindowChrome>
@@ -121,12 +121,11 @@
                         </Setter>
                     </Style>
                 </Button.Style>
-                
+
             </Button>
 
             <Button Click="BTDemoClick" Grid.Row="1">
                 <Button.Content>
-
                     <Image Name="BTDemo" Width="40" Height="40">
                         <Image.Source>
                             <ImageSource>/icons8-stock-64.png</ImageSource>
@@ -156,7 +155,7 @@
                     </Style>
                 </Button.Style>
             </Button>
-            
+
             <Button Click="BTManualClick" Grid.Row="2">
                 <Button.Content>
 
@@ -290,10 +289,39 @@
                 </Button.Style>
             </Button>
         </Grid>
-        
+
+
+
         <Grid Grid.Column="1">
-            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
+
+
+
+            <Border  
+                BorderThickness="1"
+                Height="50"
+                Width="150"
+                CornerRadius="15,15,15,15" 
+                Background="#272434"
+                Margin="0,-30,0,430"
+                >
+                <Label
+                    FontWeight="Bold"
+                    Foreground="#d6d9f4"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center" Margin="0,25,0,-25"
+                    Content="{Binding Path=NotchDisplay}"/>
+
+
+
+
+            </Border>
+
+
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="2"></Frame>
+
         </Grid>
- 
+
+
+
     </Grid>
 </Window>

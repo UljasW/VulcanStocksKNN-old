@@ -20,10 +20,12 @@ namespace VulcanStocksKNNResearch
     /// </summary>
     public partial class MainWindow : Window
     {
+        PropertyManager pmg = new PropertyManager();
         public MainWindow()
         {
             InitializeComponent();
             MainFrame.Content= new HomePage();
+            this.DataContext=pmg;
         }
         private void BTCloseClick(object sender, RoutedEventArgs e)
         {
@@ -31,28 +33,32 @@ namespace VulcanStocksKNNResearch
         }
 
         private void BTSettingsClick(object sender, RoutedEventArgs e)
-        {
-
+        {   
+            MainFrame.Content = new Settings();
+            pmg.NotchDisplay="Settings";
         }
 
         private void BTTestBEClick(object sender, RoutedEventArgs e)
         {
+            pmg.NotchDisplay="Test best entry";
 
         }
 
         private void BTManualClick(object sender, RoutedEventArgs e)
         {
+            pmg.NotchDisplay="Manual entry";
 
         }
 
         private void BTDemoClick(object sender, RoutedEventArgs e)
         {
-
+            pmg.NotchDisplay="Demotrading";
         }
 
         private void BTLogoClick(object sender, RoutedEventArgs e)
         {
-
+            pmg.NotchDisplay="Homepage";
+            MainFrame.Content = new HomePage();
         }
     }
 }

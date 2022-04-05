@@ -19,7 +19,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
+            
             <Border  
                 BorderThickness="1"
                 Height="170"
@@ -29,8 +29,9 @@
                 CornerRadius="15,15,15,15" 
                 Margin="0,10,0,0"
                 Background="#272434">
-
+                
                 <Grid>
+                    
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
@@ -42,10 +43,12 @@
                         </Image.Source>
                     </Image>
 
+                    
+                    
                     <Button Click="Button_Click" Width="100" Height="30" Grid.Column="1" Grid.Row="0">
                         <Button.Content>
 
-                            <Label FontWeight="Bold" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center">
+                            <Label Foreground="#d6d9f4" FontWeight="Bold" FontSize="13" HorizontalAlignment="Left" VerticalAlignment="Center">
                                 @vulcanstocks
                             </Label>
                         </Button.Content>
@@ -82,6 +85,29 @@
 
                 <Grid>
 
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+                    </Grid.RowDefinitions>
+                    
+                    <Label 
+                        Foreground="#d6d9f4"
+                        HorizontalAlignment="Center" 
+                        Content="How to use"
+                        VerticalAlignment="Center"
+                        FontSize="16"
+                        FontWeight="Bold"/>
+                    <Label Grid.Row="1" Foreground="#d6d9f4" FontWeight="Bold">1. Press settings</Label>
+                    <Label Grid.Row="2" Foreground="#d6d9f4" FontWeight="Bold">2. Select API or CSV</Label>
+                    <Label Grid.Row="3" Foreground="#d6d9f4" FontWeight="Bold">3. Import data to program</Label>
+                    <Label Grid.Row="4" Foreground="#d6d9f4" FontWeight="Bold">4. Train algo with data</Label>
+                    <Label Grid.Row="5" Foreground="#d6d9f4" FontWeight="Bold">5. Select way of testing</Label>
+
                 </Grid>
             </Border>
 
@@ -96,7 +122,13 @@
                 Background="#272434">
 
                 <Grid>
-
+                    <StackPanel VerticalAlignment="Center">
+                        <Label Foreground="#d6d9f4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14">*Not for real world use</Label>
+                        <Label Foreground="#d6d9f4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14">*All trading involves risk</Label>
+                        <Label Foreground="#d6d9f4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14">*Do not take anything</Label>
+                        <Label Foreground="#d6d9f4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14">here as financial advice</Label>
+                    </StackPanel>
+                    
                 </Grid>
             </Border>
             
@@ -116,101 +148,11 @@
                 Grid.Column="0"
                 CornerRadius="15,15,15,15" 
                 Margin="0,0,0,10"                
-                Background="#272434">
+                Background="#272434"
+                >
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"></ColumnDefinition>
 
-                        <ColumnDefinition Width="50"></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-
-                    <Image Grid.Row="0" Grid.Column="1" Height="30" Width="30">
-                        <Image.Source>
-                            <ImageSource>/icons8-stock-64.png</ImageSource>
-                        </Image.Source>
-                    </Image>
-
-                    <Image Grid.Row="1" Grid.Column="1" Height="30" Width="30">
-                        <Image.Source>
-                            <ImageSource>/icons8-typewriter-64.png</ImageSource>
-                        </Image.Source>
-                    </Image>
-
-                    <Image Grid.Row="2" Grid.Column="1" Height="30" Width="30">
-                        <Image.Source>
-                            <ImageSource>/icons8-goal-100.png</ImageSource>
-                        </Image.Source>
-                    </Image>
-
-                    <Image 
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        Height="30" 
-                        Width="30">
-                        
-                        <Image.Source>
-                            <ImageSource>/Settings-icon-symbol.png</ImageSource>
-                        </Image.Source>
-                    </Image>
-
-                    <Label 
-                        FontWeight="Bold"
-                        Foreground="Black"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Grid.Column="2">
-                        Demotrading
-                    </Label>
-
-                    <Label 
-                        FontWeight="Bold"
-                        Foreground="Black"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Grid.Column="2"
-                        Grid.Row="1">
-                        Manual entry
-                    </Label>
-
-                    <Label 
-                        FontWeight="Bold"
-                        Foreground="Black"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Grid.Row="2"
-                        Grid.Column="2">
-                        Find best entry
-                    </Label>
-
-                    <Label 
-                        FontWeight="Bold"
-                        Foreground="Black"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Grid.Row="3"
-                        Grid.Column="2">
-                        Settings
-                    </Label>
-
-                    <Label 
-                        FontWeight="Bold"
-                        Foreground="Black"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Grid.Column="2">
-                        Demotrading
-                    </Label>
-                    
-                </Grid>
+                
             </Border>
 
             <Border  
@@ -224,7 +166,105 @@
                 Background="#272434">
 
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Height="23" Width="23">
+                        <Image.Source>
+                            <ImageSource>/Rund logga.png</ImageSource>
+                        </Image.Source>
+                    </Image>
+
+                    <Image Grid.Row="1" Grid.Column="0" Height="23" Width="23">
+                        <Image.Source>
+                            <ImageSource>/icons8-stock-64.png</ImageSource>
+                        </Image.Source>
+                    </Image>
+
+                    <Image Grid.Row="2" Grid.Column="0" Height="23" Width="23">
+                        <Image.Source>
+                            <ImageSource>/icons8-typewriter-64.png</ImageSource>
+                        </Image.Source>
+                    </Image>
+
+                    <Image Grid.Row="3" Grid.Column="0" Height="23" Width="23">
+                        <Image.Source>
+                            <ImageSource>/icons8-goal-100.png</ImageSource>
+                        </Image.Source>
+                    </Image>
+
+                    <Image 
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Height="23" 
+                        Width="23">
+
+                        <Image.Source>
+                            <ImageSource>/Settings-icon-symbol.png</ImageSource>
+                        </Image.Source>
+                    </Image>
+
+                    <Label 
+                        FontWeight="Bold"
+                        Foreground="#d6d9f4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Column="1"
+                        Grid.Row="0">
+                        Homepage
+                    </Label>
+
+                    <Label 
+                        FontWeight="Bold"
+                        Foreground="#d6d9f4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Column="1"
+                        Grid.Row="1">
+                        Demotrading
+                    </Label>
+
+                    <Label 
+                        FontWeight="Bold"
+                        Foreground="#d6d9f4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Column="2"
+                        Grid.Row="2">
+                        Manual entry
+                    </Label>
+
+                    <Label 
+                        FontWeight="Bold"
+                        Foreground="#d6d9f4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="2">
+                        Find best entry
+                    </Label>
+
+                    <Label 
+                        FontWeight="Bold"
+                        Foreground="#d6d9f4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Grid.Row="4"
+                        Grid.Column="2">
+                        Settings
+                    </Label>
+
+                    
                 </Grid>
             </Border>
             

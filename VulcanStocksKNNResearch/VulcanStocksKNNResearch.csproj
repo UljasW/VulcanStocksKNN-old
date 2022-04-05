@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="icons8-goal-100.png" />
     <Resource Include="icons8-instagram-50.png" />
     <Resource Include="icons8-stock-64.png" />
