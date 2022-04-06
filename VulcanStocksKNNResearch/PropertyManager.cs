@@ -11,7 +11,7 @@ namespace VulcanStocksKNNResearch
     {
         //membervariables
         private string notchDisplay = "Homepage";
-
+        private string importTicker = "Enter ticker here";
         //properties
 
         public string NotchDisplay 
@@ -27,6 +27,18 @@ namespace VulcanStocksKNNResearch
             } 
         }
         
+        public string ImportTicker 
+        { 
+            get
+            {
+                return importTicker;
+            }
+            set
+            {
+                importTicker = value;
+                OnPropertyChanged("ImportTicker");
+            } 
+        }
 
         //Interfaces
 

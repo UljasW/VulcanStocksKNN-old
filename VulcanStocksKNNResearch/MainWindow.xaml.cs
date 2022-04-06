@@ -41,7 +41,6 @@ namespace VulcanStocksKNNResearch
         private void BTTestBEClick(object sender, RoutedEventArgs e)
         {
             pmg.NotchDisplay="Test best entry";
-
         }
 
         private void BTManualClick(object sender, RoutedEventArgs e)

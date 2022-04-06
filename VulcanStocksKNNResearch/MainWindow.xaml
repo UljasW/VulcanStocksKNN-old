@@ -312,12 +312,7 @@
                     HorizontalAlignment="Center" Margin="0,25,0,-25"
                     Content="{Binding Path=NotchDisplay}"/>
 
-
-
-
             </Border>
-
-
             <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.RowSpan="2"></Frame>
 
         </Grid>

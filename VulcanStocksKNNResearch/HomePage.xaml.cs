@@ -24,9 +24,12 @@ namespace VulcanStocksKNNResearch
         public HomePage()
         {
             InitializeComponent();
+            
+
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Instagram_Click(object sender, RoutedEventArgs e)
         {
             Process.Start(new ProcessStartInfo
             {
